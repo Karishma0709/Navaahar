@@ -7,10 +7,10 @@ const HeroSection = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative w-full h-[70vh] mt-20 flex flex-col items-center text-white">
+    <div className="relative w-full h-[70vh]  mt-20 flex flex-col items-center text-white">
       {/* ✅ Video Background */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-[70vh] object-cover"
         src={bg1}
         autoPlay
         loop

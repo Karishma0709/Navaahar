@@ -1,8 +1,8 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import CattleFeedProduction from './CattleFeedProduction';
-import MissionVision from './MissionVision';
-// import img from '../assets/about.jpg';
+import React from "react";
+import { motion } from "framer-motion";
+import CattleFeedProduction from "./CattleFeedProduction";
+import MissionVision from "./MissionVision";
+import img from "../assets/about.jpg";
 import bg2 from "../assets/bg2.mov"; // ✅ Import video file
 
 const AboutUs = () => {
@@ -48,20 +48,21 @@ const AboutUs = () => {
         </div>
       </motion.div>
 
-      {/* ✅ About Section with Scroll Animation */}
+      {/* ✅ About Section (Image & Text Side-by-Side in Tablet & Desktop) */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="flex flex-col lg:flex-row items-center max-w-6xl mx-auto py-16 px-6 lg:px-12 space-y-8 lg:space-y-0 lg:space-x-20"
+        className="flex flex-col md:flex-row items-center max-w-6xl mx-auto py-16 px-6 md:px-10 lg:px-12 space-y-8 md:space-y-0 md:space-x-10 lg:space-x-20"
       >
+        {/* ✅ Left Side - Image */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="lg:w-1/2"
+          className="md:w-1/2"
         >
           <img
             src={img}
@@ -70,12 +71,13 @@ const AboutUs = () => {
           />
         </motion.div>
 
+        {/* ✅ Right Side - Text */}
         <motion.div
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="lg:w-1/2"
+          className="md:w-1/2"
         >
           <h2 className="text-3xl font-extrabold text-green-700 relative">
             Who We Are
@@ -90,7 +92,7 @@ const AboutUs = () => {
         </motion.div>
       </motion.div>
 
-      {/* ✅ Vision & Mission Section with Scroll Animation */}
+      {/* ✅ Vision & Mission Section */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -100,7 +102,7 @@ const AboutUs = () => {
         <MissionVision />
       </motion.div>
 
-      {/* ✅ Cattle Feed Production Section with Scroll Animation */}
+      {/* ✅ Cattle Feed Production Section */}
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
