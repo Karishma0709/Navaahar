@@ -15,7 +15,7 @@ const Navbar = () => {
           <Link to="/" className="text-sm font-bold">
             <img src={logo} alt="Logo" className="w-20 h-20 md:w-24 md:h-24" />
           </Link>
-          <span className="ml-2 font-bold text-primary text-2xl">Navaahar</span>
+          <span className="ml-2 font-bold text-primary text-3xl">NAVAAHAR</span>
         </div>
 
         {/* ✅ Desktop Nav Links (Hidden on Tablets & Mobile) */}
