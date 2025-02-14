@@ -4,27 +4,28 @@ import Slider from "react-slick";
 import { FaQuoteLeft } from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import img from "../assets/testimonial.jpg"
 
 const testimonials = [
   {
     id: 1,
     name: "Rajesh Kumar",
     role: "Dairy Farm Owner",
-    image: "https://via.placeholder.com/100",
+    image: img,
     feedback: "Since using this cattle feed, my milk production has increased significantly!",
   },
   {
     id: 2,
     name: "Meera Singh",
     role: "Organic Farmer",
-    image: "https://via.placeholder.com/100",
+    image: img,
     feedback: "High-quality feed with natural ingredients. My cattle are healthier than ever!",
   },
   {
     id: 3,
     name: "Amit Yadav",
     role: "Veterinary Specialist",
-    image: "https://via.placeholder.com/100",
+    image: img,
     feedback: "I recommend this feed to all farmers. It has excellent nutritional value!",
   },
 ];
@@ -72,7 +73,7 @@ const TestimonialSection = () => {
                 <div className="bg-white p-8 rounded-xl shadow-lg border border-green-300 flex flex-col items-center">
                   
                   {/* ✅ Quote Icon */}
-                  <FaQuoteLeft className="text-5xl text-green-600 mb-4" />
+                  <FaQuoteLeft className="text-5xl text-primary mb-4" />
                   
                   {/* ✅ Testimonial Text */}
                   <p className="text-gray-700 text-lg italic leading-relaxed text-center">
@@ -84,7 +85,7 @@ const TestimonialSection = () => {
                     <img
                       src={testimonial.image}
                       alt={testimonial.name}
-                      className="w-20 h-20 rounded-full border-4 border-green-500"
+                      className="w-20 h-20 rounded-full border-4 border-primary"
                     />
                     <h3 className="text-2xl font-semibold text-green-900 mt-3">
                       {testimonial.name}

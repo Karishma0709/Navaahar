@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "./ContactUs.module.css";
+import bg5 from "../assets/bg5.mov";
 
 const ContactUs = () => {
   const [data, setData] = useState({
@@ -51,11 +52,10 @@ const ContactUs = () => {
     <div className="min-h-screen bg-gray-100">
       {/* ✅ Banner Section */}
       <div className="relative w-full h-72 mt-20 lg:h-96">
-        <img
-          src="https://via.placeholder.com/1500x500" // Replace with your banner image URL
-          alt="Contact Us Banner"
-          className="w-full h-full object-cover"
-        />
+        <video autoPlay loop muted className="w-full h-full object-cover">
+          <source src={bg5} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
         <div className="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white text-center px-4">
           <h1 className="text-4xl lg:text-5xl font-bold">Get In Touch</h1>
           <p className="text-lg mt-2">Reach out to us for any queries or assistance.</p>
@@ -135,9 +135,7 @@ const ContactUs = () => {
           <h2 className="text-3xl font-bold text-green-700 mb-3 text-center">
             Our Location
           </h2>
-          {/* ✅ Gradient Underline */}
-         
-
+          
           <p className="text-green-800 mb-4"><span className="font-bold">Timing:</span> 9:30 AM to 6:30 PM</p>
           <p className="text-green-800 mb-4">
             <span className="font-bold">Office:</span> Betul Biofuel Pvt. Ltd., 2nd Floor Old LIC Building, Gurudwaraganj, Betul (M.P.)

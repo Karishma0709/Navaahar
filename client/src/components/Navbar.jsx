@@ -11,13 +11,15 @@ const Navbar = () => {
     <nav className="shadow-md fixed w-full top-0 left-0 z-50 bg-white">
       <div className="container mx-auto px-4 md:px-8 lg:px-12 flex justify-between items-center">
         {/* ✅ Logo */}
+        <div className='flex'>
         <Link to="/" className="text-sm font-bold">
           <img src={logo} alt="Logo" className="w-20 h-20 md:w-24 md:h-24" />
         </Link>
-
+        <span className='mt-8 font-bold text-primary text-2xl'>Navaahar</span>
+        </div>
         {/* ✅ Desktop Nav Links */}
         <ul className="hidden md:flex space-x-6 lg:space-x-12 text-lg font-semibold uppercase tracking-wide">
-          {['Home', 'About', 'Product', 'Gallery', 'Career'].map((item, index) => (
+          {['Home', 'About us', 'Products', 'Gallery', 'Career'].map((item, index) => (
             <motion.li
               key={item}
               initial={{ opacity: 0, y: -10 }}
@@ -51,7 +53,7 @@ const Navbar = () => {
             to="/contact"
             className="px-5 py-2 bg-gradient-to-r from-green-500 to-green-700 text-white rounded-full font-semibold uppercase tracking-wide shadow-lg hover:scale-105 transition-transform duration-300"
           >
-            Contact
+            Contact us
           </Link>
         </motion.div>
 

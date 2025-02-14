@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FaShieldAlt, FaHeadset, FaDollarSign, FaLeaf } from "react-icons/fa";
-import why from "../assets/why2.webp";
+import why from "../assets/why2.webp"; // Ensure this path is correct
 
 const reasons = [
   { id: 1, title: "Quality Assurance", description: "We ensure top-notch quality in all our products.", icon: <FaShieldAlt className="text-yellow-500 text-3xl" /> },
@@ -15,7 +15,7 @@ const WhyChooseUs = () => {
   const isInView = useInView(ref, { once: true });
 
   return (
-    <div ref={ref} className="py-16 px-6 lg:px-12  bg-green-50">
+    <div ref={ref} className="py-16 px-6 lg:px-12 bg-green-50">
       {/* ✅ Heading with Gradient Underline */}
       <motion.h2
         initial={{ opacity: 0, y: -50 }}
@@ -47,14 +47,18 @@ const WhyChooseUs = () => {
           ))}
         </div>
 
-        {/* ✅ Center Image */}
+        {/* ✅ Center Image with Fixes */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="mx-20 my-8"
+          className="mx-10 my-8 flex justify-center"
         >
-          <img src={why} alt="Why Choose Us" className="w-80 h-80 rounded-full object-cover border-4 border-green-600 shadow-lg" />
+          <img
+            src={why}
+            alt="Why Choose Us"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-green-600 shadow-lg overflow-hidden"
+          />
         </motion.div>
 
         {/* ✅ Right Reasons (Boxed) */}

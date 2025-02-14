@@ -18,7 +18,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         {/* About Section */}
         <div>
-          <img src={logo} alt="Company Logo" className="w-28 h-28 rounded-full" />
+          <img src={logo} alt="Company Logo" className="w-28 h-28 rounded-full -ml-5" />
           <h2 className="font-bold text-lg mb-3">About</h2>
           <p className="text-white w-1/2">
             Share store details, promotions, or brand content with your customers.
@@ -73,12 +73,12 @@ const Footer = () => {
           </ul>
         </div>
 
-        {/* Contact Details Section */}
-        <div className="text-center md:text-left">
+        {/* Contact Details Section - Left Aligned */}
+        <div className="text-left">
           <h2 className="font-bold text-lg mb-3">Contact Us</h2>
           <ul className="space-y-2">
-            <li className="flex items-center justify-center md:justify-start gap-2">
-              <FaMapMarkerAlt className="text-xl" />
+            <li className="flex items-center gap-2">
+              <FaMapMarkerAlt className="text-3xl -mt-10" />
               <a
                 href="https://maps.google.com/?q=Betul Biofuel Pvt. Ltd., 2nd Floor Old LIC Building, Gurudwaraganj, Betul (M.P.) - 462001"
                 target="_blank"
@@ -88,7 +88,7 @@ const Footer = () => {
                 Betul Biofuel Pvt. Ltd., 2nd Floor Old LIC Building, Gurudwaraganj, Betul (M.P.) - 462001
               </a>
             </li>
-            <li className="flex items-center justify-center md:justify-start gap-2">
+            <li className="flex items-center gap-2">
               <AiFillPhone className="text-xl" />
               <a
                 href="tel:+919876543210"
@@ -97,7 +97,7 @@ const Footer = () => {
                 +91 98765 43210
               </a>
             </li>
-            <li className="flex items-center justify-center md:justify-start gap-2">
+            <li className="flex items-center gap-2">
               <AiOutlineMail className="text-xl" />
               <a
                 href="mailto:mahesh@bbpl.com"
@@ -133,7 +133,7 @@ const Footer = () => {
 
       {/* Footer Bottom Section */}
       <div className="border-t border-white mt-5 pt-5 flex flex-col md:flex-row justify-between items-center">
-        <p className="text-white">Navaahar. All Rights Reserved.</p>
+        <p className="text-white">Powered by Nathun Digital Solutions.</p>
       </div>
     </footer>
   );
