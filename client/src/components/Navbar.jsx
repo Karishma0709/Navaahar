@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="shadow-md fixed w-full top-0 left-0 z-50 bg-white">
-      <div className="container mx-auto px-4 md:px-8 lg:px-12 flex justify-between items-center">
+      <div className="container mx-auto px-4 md:px-8 lg:px-10 flex justify-between items-center">
         {/* ✅ Logo */}
         <div className="flex items-center">
           <Link to="/" className="text-sm font-bold">
@@ -19,7 +19,7 @@ const Navbar = () => {
         </div>
 
         {/* ✅ Desktop Nav Links (Hidden on Tablets & Mobile) */}
-        <ul className="hidden lg:flex space-x-6 text-lg font-semibold uppercase tracking-wide">
+        <ul className="hidden lg:flex space-x-10 text-lg font-semibold uppercase tracking-wide">
           {['Home', 'About us', 'Products', 'Gallery', 'Career'].map((item, index) => (
             <motion.li
               key={item}
