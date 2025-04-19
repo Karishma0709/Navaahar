@@ -1,12 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaQuestionCircle, FaComments, FaIndustry, FaTruck } from "react-icons/fa";
+import { FaClipboardCheck, FaCogs, FaChartLine } from "react-icons/fa";
 
 const processSteps = [
-  { id: 1, title: "Step 1: Inquiry", description: "Customers inquire about our products and services.", icon: <FaQuestionCircle /> },
-  { id: 2, title: "Step 2: Consultation", description: "Our experts guide and recommend the best options.", icon: <FaComments /> },
-  { id: 3, title: "Step 3: Production", description: "We manufacture products with high-quality materials.", icon: <FaIndustry /> },
-  { id: 4, title: "Step 4: Delivery", description: "Products are safely packaged and delivered to you.", icon: <FaTruck /> },
+  {
+    id: 1,
+    title: "Step 1: Extensive QC",
+    description: "Every product undergoes multiple rounds of rigorous quality control checks to ensure premium standards.",
+    icon: <FaClipboardCheck />,
+  },
+  {
+    id: 2,
+    title: "Step 2: ⁠Automated system",
+    description: "We streamline operations using fully automated systems for maximum efficiency and minimal error.",
+    icon: <FaCogs />,
+  },
+  {
+    id: 3,
+    title: "Step 3: ⁠Tracking system for sales",
+    description: "Our integrated tracking tools monitor sales in real-time, ensuring transparency and accountability.",
+    icon: <FaChartLine />,
+  },
 ];
 
 const ProcessSection = () => {
