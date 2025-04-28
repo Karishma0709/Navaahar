@@ -6,6 +6,7 @@ import Gallery from '../components/Gallery';
 import Product from '../components/Products';
 import AboutUs from '../components/AboutUs';
 import CareerPage from '../components/CareerPage';
+import ProductDetail from '../components/ProductDetail';
 
 export const router = createBrowserRouter([
   {
@@ -40,7 +41,10 @@ export const router = createBrowserRouter([
         path: 'career',
         element: <CareerPage/>,
       },
-    
+      {
+        path: '/product/:id',
+        element: <ProductDetail/>,
+      },
      
     ],
   },
