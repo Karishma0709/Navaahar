@@ -5,17 +5,17 @@ import product from "../assets/mainProduct.jpeg";
 const features = [
   {
     id: 1,
-    title: "In house ddgs",
+    title: "In House DDGS",
     description: "We produce DDGS in-house, ensuring superior quality control and nutritional value for animal feed."
   },
   {
     id: 2,
-    title: "⁠Integrated food park",
+    title: "⁠Integrated Food Park",
     description: "Our facility operates within an integrated food park that supports streamlined processing and logistics."
   },
   {
     id: 3,
-    title: "World class labs",
+    title: "World Class Labs",
     description: "Equipped with state-of-the-art laboratories, we conduct rigorous testing to meet global standards."
   },
 ];

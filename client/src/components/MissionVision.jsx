@@ -24,7 +24,9 @@ const MissionVision = () => {
         transition={{ duration: 1 }}
         className="text-lg text-gray-700 text-center max-w-3xl mx-auto"
       >
-        We are committed to driving innovation and excellence in our field. Our mission is to empower individuals and businesses through cutting-edge solutions.
+        We are committed to driving innovation and excellence in our field. Our
+        mission is to empower individuals and businesses through cutting-edge
+        solutions.
       </motion.p>
 
       {/* Cards Section */}
@@ -36,8 +38,10 @@ const MissionVision = () => {
         >
           <FaBullseye className="text-yellow-500 text-5xl mx-auto mb-4" />
           <h3 className="text-2xl font-semibold text-primary">Our Mission</h3>
-          <p className="text-gray-600 mt-4">
-            To provide exceptional services and solutions that drive success, growth, and innovation.
+          <p className="text-gray-600 mt-4 text-lg" >
+            To support the livestock sector with innovative, reliable, and
+            cost-effective feed solutions that promote animal well-being and
+            boost farmers' productivity.
           </p>
         </motion.div>
 
@@ -48,8 +52,10 @@ const MissionVision = () => {
         >
           <FaEye className="text-yellow-500 text-5xl mx-auto mb-4" />
           <h3 className="text-2xl font-semibold text-primary">Our Vision</h3>
-          <p className="text-gray-600 mt-4">
-            To be a globally recognized leader in our industry, setting new standards of excellence.
+          <p className="text-gray-600 mt-4 text-lg">
+            To be a trusted leader in the animal nutrition industry through
+            excellence in product quality, sustainable practices, and customer
+            satisfaction.{" "}
           </p>
         </motion.div>
       </div>

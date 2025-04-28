@@ -20,7 +20,7 @@ const Navbar = () => {
 
         {/* ✅ Desktop Nav Links (Hidden on Tablets & Mobile) */}
         <ul className="hidden lg:flex space-x-10 text-lg font-semibold uppercase tracking-wide">
-          {['Home', 'About us', 'Products', 'Gallery', 'Career'].map((item, index) => (
+          {['Home', 'About us', 'Products', 'Gallery', 'Sister Company'].map((item, index) => (
             <motion.li
               key={item}
               initial={{ opacity: 0, y: -10 }}

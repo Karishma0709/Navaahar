@@ -136,13 +136,13 @@ const ContactUs = () => {
             Our Location
           </h2>
           
-          <p className="text-green-800 mb-4"><span className="font-bold">Timing:</span> 9:30 AM to 6:30 PM</p>
+          <p className="text-green-800 mb-4"><span className="font-bold">Timing:</span> 9:00 AM to 6:00 PM</p>
           <p className="text-green-800 mb-4">
             <span className="font-bold">Office:</span> Betul Biofuel Pvt. Ltd., 2nd Floor Old LIC Building, Gurudwaraganj, Betul (M.P.)
           </p>
           <p className="text-green-800 mb-4"><span className="font-bold">Pincode:</span> 462001</p>
-          <p className="text-green-800 mb-4"><span className="font-bold">Phone:</span> +91 98765 43210</p>
-          <p className="text-green-800 mb-4"><span className="font-bold">Email:</span> mahesh@bbpl.com</p>
+          <p className="text-green-800 mb-4"><span className="font-bold">Phone:</span> +91 74150 01555</p>
+          <p className="text-green-800 mb-4"><span className="font-bold">Email:</span> hr.navaahaar@betulbiofuel.com</p>
 
           {/* Google Map */}
           <div className={`${styles.map} w-full h-64 bg-green-100 mt-6 rounded-lg overflow-hidden`}>

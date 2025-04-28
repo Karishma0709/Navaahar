@@ -81,14 +81,14 @@ const Footer = () => {
             </li>
             <li className="flex flex-col md:flex-row items-center md:items-start md:gap-2">
               <AiFillPhone className="text-xl mb-1 md:mb-0" />
-              <a href="tel:+919876543210" className="hover:text-yellow-400 transition-all duration-300">
-                +91 98765 43210
+              <a href="tel:+917415001555" className="hover:text-yellow-400 transition-all duration-300">
+              +91 74150 01555
               </a>
             </li>
             <li className="flex flex-col md:flex-row items-center md:items-start md:gap-2">
               <AiOutlineMail className="text-xl mb-1 md:mb-0" />
-              <a href="mailto:mahesh@bbpl.com" className="hover:text-yellow-400 transition-all duration-300">
-                mahesh@bbpl.com
+              <a href="mailto:hr.navaahaar@betulbiofuel.com" className="hover:text-yellow-400 transition-all duration-300">
+              hr.navaahaar@betulbiofuel.com
               </a>
             </li>
           </ul>
