@@ -2,8 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 import CattleFeedProduction from "./CattleFeedProduction";
 import MissionVision from "./MissionVision";
-import img from "../assets/about.jpg";
-import bg2 from "../assets/bg2.mov"; // ✅ Import video file
+import img1 from "../assets/about.jpg"; // ✅ Image 1
+import img2 from "../assets/about.jpg"; // ✅ Image 2
+import img3 from "../assets/about.jpg"; // ✅ Image 3
+import bg2 from "../assets/bg2.mov"; // ✅ Background video
 
 const AboutUs = () => {
   return (
@@ -45,26 +47,38 @@ const AboutUs = () => {
         </div>
       </motion.div>
 
-      {/* ✅ About Section (Improved Alignment) */}
+      {/* ✅ About Section with 3 Images */}
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="flex flex-col md:flex-row items-center max-w-7xl mx-auto py-16 px-6 md:px-10 lg:px-16 space-y-10 md:space-y-0 md:space-x-10"
+        className="flex flex-col md:flex-row items-center max-w-7xl mx-auto py-16 px-6 md:px-10 lg:px-12 space-y-10 md:space-y-0 md:space-x-16"
       >
-        {/* ✅ Left Side - Image */}
+        {/* ✅ Left Side - 3 Images */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="md:w-1/2"
+          className="flex flex-wrap justify-center gap-5 md:w-1/2"
         >
+          <div className="flex flex-col gap-5">
+            <img
+              src={img1}
+              alt="Image 1"
+              className="w-[250px] h-[250px] sm:w-[220px] sm:h-[200px] md:w-[250px] md:h-[230px] object-cover rounded-lg shadow-md"
+            />
+            <img
+              src={img2}
+              alt="Image 2"
+              className="w-[250px] h-[250px] sm:w-[220px] sm:h-[200px] md:w-[250px] md:h-[230px] object-cover rounded-lg shadow-md"
+            />
+          </div>
           <img
-            src={img}
-            alt="Our Farm"
-            className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 ease-in-out"
+            src={img3}
+            alt="Image 3"
+            className="w-[250px] h-[500px] sm:w-[230px] sm:h-[400px] md:w-[270px] md:h-[500px] object-cover rounded-lg shadow-lg mt-5 md:mt-0"
           />
         </motion.div>
 
@@ -80,21 +94,20 @@ const AboutUs = () => {
             Who We Are
             <span className="block w-24 h-1 bg-gradient-to-r from-yellow-500 to-green-500 mx-auto md:mx-0 mt-2"></span>
           </h2>
-          <p className="text-gray-700 mt-6 text-lg leading-relaxed">
+          <p className="text-gray-700 mt-6 text-lg leading-relaxed text-justify">
             Navaahar Cattle Feed is a trusted name in the livestock nutrition
             sector, committed to delivering high-quality, nutrient-rich cattle
             feed that supports the health and productivity of livestock across
-            the country. <br /><br />
-            Established with the vision of enhancing animal health
+            the country. Established with the vision of enhancing animal health
             and supporting the dairy industry, Navaahar utilizes cutting-edge
             technology and sustainable practices to deliver premium cattle feed
-            products. <br /><br />
-            Our products are developed using carefully selected raw
+            products. Our products are developed using carefully selected raw
             materials, ensuring consistency, freshness, and balanced nutrition
-            in every batch. With a team of experienced nutritionists, veterinary
+            in every batch. <br /><br /> 
+            With a team of experienced nutritionists, veterinary
             experts, and quality control specialists, we maintain strict
-            adherence to industry regulations and sustainable practices. <br /><br />
-            Our advanced manufacturing facility is equipped to meet the growing
+            adherence to industry regulations and sustainable practices. Our
+            advanced manufacturing facility is equipped to meet the growing
             demands of dairy and livestock farmers, ensuring timely delivery and
             product integrity. <br /><br />
             At Navaahar, we believe healthy livestock means
