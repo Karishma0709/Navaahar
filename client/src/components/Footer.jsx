@@ -53,7 +53,7 @@ const Footer = () => {
               { name: 'Privacy Policy', path: '/privacy-policy' },
               { name: 'Terms And Conditions', path: '/terms' },
               { name: 'Return And Refund', path: '/return-policy' },
-              { name: 'betulbiofuel.com', path: 'https://betulbiofuel.com' },
+              // { name: 'betulbiofuel.com', path: 'https://betulbiofuel.com' },
               { name: 'ERP link', path: '/erp' },
             ].map((item, index) => (
               <li key={index} className="hover:text-yellow-400 transition-all duration-300">
