@@ -83,7 +83,7 @@ const Navbar = () => {
           <FaTimes />
         </button>
 
-        {['Home', 'About us', 'Products', 'Gallery', 'Career'].map((item) => (
+        {['Home', 'About us', 'Products', 'Gallery', 'Sister Company'].map((item) => (
           <Link
             key={item}
             to={`/${item.toLowerCase()}`}
