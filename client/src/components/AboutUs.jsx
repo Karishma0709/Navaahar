@@ -64,7 +64,7 @@ const AboutUs = () => {
           <img
             src={img1}
             alt="About Image"
-            className="w-[300px] h-[350px] sm:w-[400px] sm:h-[450px] md:w-[500px] md:h-[550px] object-cover rounded-xl shadow-lg"
+            className="w-[300px] h-[350px] sm:w-[400px] sm:h-[450px] md:w-[500px] md:h-[550px] object-cover rounded-xl shadow-lg mt-14"
           />
         </motion.div>
 
