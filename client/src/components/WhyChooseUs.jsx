@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { FaShieldAlt, FaHeadset, FaDollarSign, FaLeaf } from "react-icons/fa";
+import { FaShieldAlt, FaHeadset, FaRupeeSign, FaLeaf } from "react-icons/fa";
 import why from "../assets/why2.webp"; // Ensure this path is correct
 
 const reasons = [
   { id: 1, title: "Quality Assurance", description: "We ensure top-notch quality in all our products.", icon: <FaShieldAlt className="text-yellow-500 text-3xl" /> },
   { id: 2, title: "Customer Support", description: "24/7 dedicated support for all your needs.", icon: <FaHeadset className="text-yellow-500 text-3xl" /> },
-  { id: 3, title: "Affordable Pricing", description: "Premium quality at the best market prices.", icon: <FaDollarSign className="text-yellow-500 text-3xl" /> },
+  { id: 3, title: "Affordable Pricing", description: "Premium quality at the best market prices.", icon: <FaRupeeSign className="text-yellow-500 text-3xl" /> },
   { id: 4, title: "Eco-Friendly", description: "Committed to sustainable and green practices.", icon: <FaLeaf className="text-yellow-500 text-3xl" /> },
 ];
 

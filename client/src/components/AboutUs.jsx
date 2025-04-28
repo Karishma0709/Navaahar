@@ -55,32 +55,23 @@ const AboutUs = () => {
         viewport={{ once: true }}
         className="flex flex-col md:flex-row items-center max-w-7xl mx-auto py-16 px-6 md:px-10 lg:px-12 space-y-10 md:space-y-0 md:space-x-16"
       >
-        {/* ✅ Left Side - 3 Images */}
-        <motion.div
-          initial={{ scale: 0.8, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-5 md:w-1/2"
-        >
-          <div className="flex flex-col gap-5">
-            <img
-              src={img1}
-              alt="Image 1"
-              className="w-[250px] h-[250px] sm:w-[220px] sm:h-[200px] md:w-[250px] md:h-[230px] object-cover rounded-lg shadow-md"
-            />
-            <img
-              src={img2}
-              alt="Image 2"
-              className="w-[250px] h-[250px] sm:w-[220px] sm:h-[200px] md:w-[250px] md:h-[230px] object-cover rounded-lg shadow-md"
-            />
-          </div>
-          <img
-            src={img3}
-            alt="Image 3"
-            className="w-[250px] h-[500px] sm:w-[230px] sm:h-[400px] md:w-[270px] md:h-[500px] object-cover rounded-lg shadow-lg mt-5 md:mt-0"
-          />
-        </motion.div>
+{/* ✅ Left Side - Single Image */}
+<motion.div
+  initial={{ scale: 0.8, opacity: 0 }}
+  whileInView={{ scale: 1, opacity: 1 }}
+  transition={{ duration: 1 }}
+  viewport={{ once: true }}
+  className="w-full md:w-1/2 flex justify-center"
+>
+  <img
+    src={img1}
+    alt="About Image"
+    className="w-[300px] h-[350px] sm:w-[400px] sm:h-[450px] md:w-[450px] md:h-[500px] object-cover rounded-xl shadow-lg"
+  />
+</motion.div>
+
+
+
 
         {/* ✅ Right Side - Text */}
         <motion.div
