@@ -4,6 +4,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 
 import p1 from '../assets/product1.png';
 import p2 from '../assets/product2.png';
@@ -59,30 +60,6 @@ const products = [
       "Moisture: 10%",
     ],
   },
-  // {
-  //   id: 5,
-  //   name: "Organic Cattle Feed",
-  //   price: "₹1,100",
-  //   image: p1,
-  //   nutrients: [
-  //     "Crude Protein: 20%",
-  //     "Fat: 3%",
-  //     "Fiber: 12%",
-  //     "Moisture: 11%",
-  //   ],
-  // },
-  // {
-  //   id: 6,
-  //   name: "Organic Cattle Feed",
-  //   price: "₹1,100",
-  //   image: p2,
-  //   nutrients: [
-  //     "Crude Protein: 21%",
-  //     "Fat: 4.2%",
-  //     "Fiber: 11%",
-  //     "Moisture: 9%",
-  //   ],
-  // },
 ];
 
 const ProductSlider = () => {
@@ -90,6 +67,7 @@ const ProductSlider = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const [selectedProduct, setSelectedProduct] = useState(null);
+  const navigate = useNavigate(); // Initialize useNavigate hook
 
   const settings = {
     infinite: true,
@@ -102,6 +80,10 @@ const ProductSlider = () => {
       { breakpoint: 1024, settings: { slidesToShow: 2 } },
       { breakpoint: 768, settings: { slidesToShow: 1 } },
     ],
+  };
+
+  const handleProductClick = () => {
+    navigate('/products'); // Redirect to /products page
   };
 
   return (
@@ -129,7 +111,7 @@ const ProductSlider = () => {
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="p-4"
-              onClick={() => setSelectedProduct(product)}
+              onClick={handleProductClick} // Call the function on click
             >
               <div className="bg-white rounded-lg shadow-lg p-6 text-center border-b-4 border-green-600 hover:scale-105 transition-transform duration-300 cursor-pointer">
                 <img
@@ -140,7 +122,6 @@ const ProductSlider = () => {
                 <h3 className="text-xl font-semibold text-gray-800">
                   {product.name}
                 </h3>
-                {/* <p className="text-green-700 mt-2">{product.price}</p> */}
               </div>
             </motion.div>
           ))}
@@ -175,4 +156,4 @@ const ProductSlider = () => {
   );
 };
 
-export default ProductSlider;  
+export default ProductSlider;
