@@ -7,6 +7,15 @@ import { motion } from 'framer-motion';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  // Array to hold the nav links and their corresponding route or external URL
+  const navItems = [
+    { name: 'Home', path: '/' },
+    { name: 'About us', path: '/aboutus' },
+    { name: 'Products', path: '/products' },
+    { name: 'Gallery', path: '/gallery' },
+    { name: 'Sister Company', path: 'https://betulbiofuel.com/', external: true },
+  ];
+
   return (
     <nav className="shadow-md fixed w-full top-0 left-0 z-50 bg-white">
       <div className="container mx-auto px-4 md:px-8 lg:px-10 flex justify-between items-center">
@@ -20,20 +29,31 @@ const Navbar = () => {
 
         {/* ✅ Desktop Nav Links (Hidden on Tablets & Mobile) */}
         <ul className="hidden lg:flex space-x-10 text-lg font-semibold uppercase tracking-wide">
-          {['Home', 'About us', 'Products', 'Gallery', 'Sister Company'].map((item, index) => (
+          {navItems.map((item, index) => (
             <motion.li
-              key={item}
+              key={item.name}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1, duration: 0.3 }}
               className="relative group"
             >
-              <Link
-                to={`/${item.toLowerCase()}`}
-                className="text-gray-700 hover:text-green-600 transition duration-300"
-              >
-                {item}
-              </Link>
+              {item.external ? (
+                <a
+                  href={item.path}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-700 hover:text-green-600 transition duration-300"
+                >
+                  {item.name}
+                </a>
+              ) : (
+                <Link
+                  to={item.path}
+                  className="text-gray-700 hover:text-green-600 transition duration-300"
+                >
+                  {item.name}
+                </Link>
+              )}
               <motion.span
                 className="absolute bottom-0 left-1/2 w-0 h-[3px] bg-yellow-500 transition-all duration-300 group-hover:w-full group-hover:left-0"
                 layoutId="underline"
@@ -83,16 +103,30 @@ const Navbar = () => {
           <FaTimes />
         </button>
 
-        {['Home', 'About us', 'Products', 'Gallery', 'Sister Company'].map((item) => (
-          <Link
-            key={item}
-            to={`/${item.toLowerCase()}`}
-            className="text-white text-lg font-medium hover:text-gray-300 transition duration-300 relative group pb-1"
-            onClick={() => setIsOpen(false)}
-          >
-            {item}
-            <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
-          </Link>
+        {navItems.map((item) => (
+          item.external ? (
+            <a
+              key={item.name}
+              href={item.path}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-white text-lg font-medium hover:text-gray-300 transition duration-300 relative group pb-1"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.name}
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+            </a>
+          ) : (
+            <Link
+              key={item.name}
+              to={item.path}
+              className="text-white text-lg font-medium hover:text-gray-300 transition duration-300 relative group pb-1"
+              onClick={() => setIsOpen(false)}
+            >
+              {item.name}
+              <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-white transition-all duration-300 group-hover:w-full"></span>
+            </Link>
+          )
         ))}
 
         {/* ✅ Contact Button for Mobile & Tablet */}
@@ -101,7 +135,7 @@ const Navbar = () => {
           className="px-6 py-2 bg-white text-green-700 rounded-full font-medium hover:bg-gray-100 transition shadow-md"
           onClick={() => setIsOpen(false)}
         >
-          Contact
+          Contact Us
         </Link>
       </motion.div>
     </nav>
