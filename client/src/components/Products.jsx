@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom"; // ✅ Import useNavigate
-import p1 from "../assets/product1.png";
-import p2 from "../assets/product2.png";
-import p3 from "../assets/product3.png";
-import p4 from "../assets/product4.png";
+import p1 from '../assets/SuperPallate.png';
+import p2 from '../assets/MawaMix.png';
+import p3 from '../assets/Supremegold.png';
+import p4 from '../assets/doodhmalai.png';
 import bg3 from "../assets/bg3.mov"; 
 
 export const products = [   // ✅ Export products array also
