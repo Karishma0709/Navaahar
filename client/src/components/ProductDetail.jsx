@@ -1,34 +1,88 @@
 import React from "react";
-import { useParams, Link } from "react-router-dom";
-import { products } from "./Products"
+import { useParams } from "react-router-dom";
+import { products } from "./Products";
 
-const ProductDetail = () => {
+const ProductDetails = () => {
   const { id } = useParams();
-  const product = products.find((item) => item.id === parseInt(id));
+  const product = products.find((p) => p.id === parseInt(id));
 
   if (!product) {
-    return <div className="text-center mt-20 text-2xl">Product Not Found</div>;
+    return <div className="text-center text-red-600 mt-10">Product not found.</div>;
   }
 
   return (
-    <div className="min-h-screen bg-gray-100 flex flex-col items-center justify-center py-20 mt-10 px-5">
-      <div className="max-w-3xl w-full bg-white rounded-lg shadow-lg p-8">
-        <img src={product.image} alt={product.name} className="w-full h-96 object-cover rounded-lg mb-6" />
-        <h1 className="text-4xl font-bold text-green-700">{product.name}</h1>
-        <p className="text-gray-700 text-lg mt-4">{product.description}</p>
-        {/* <h2 className="text-2xl font-semibold mt-6 text-green-700">Price: {product.price}</h2> */}
-        <h3 className="text-xl font-semibold mt-6">Nutrient Details:</h3>
-        <p className="text-gray-600 mt-2">{product.nutrients}</p>
+    <div className="max-w-6xl mx-auto mt-20 px-6 py-8 bg-white rounded-lg shadow-md">
+      <h1 className="text-4xl font-bold text-green-700 mb-6 border-b pb-2">{product.name}</h1>
 
-        <Link
-          to="/products"
-          className="inline-block mt-8 bg-green-600 text-white py-2 px-6 rounded-lg hover:bg-green-700 transition duration-300"
-        >
-          Back to Products
-        </Link>
+      <p className="text-gray-800 text-lg mb-6">{product.description}</p>
+
+      {/* Instructions */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-semibold text-green-700 mb-3">Instructions</h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-1">
+          {product.instructions.usage.map((line, index) => (
+            <li key={index}>{line}</li>
+          ))}
+        </ul>
       </div>
+
+      {/* Feeding Schedule Table */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-semibold text-green-700 mb-3">Feeding Schedule</h2>
+        <div className="overflow-x-auto">
+          <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
+            <thead className="bg-green-100 text-green-900">
+              <tr>
+                <th className="px-4 py-2 border">Animal Type</th>
+                <th className="px-4 py-2 border">Cow</th>
+                <th className="px-4 py-2 border">Buffalo</th>
+              </tr>
+            </thead>
+            <tbody>
+              {product.instructions.feedingSchedule.map((schedule, index) => (
+                <tr key={index} className="text-center text-gray-800 hover:bg-gray-100">
+                  <td className="px-4 py-2 border font-medium">{schedule.type}</td>
+                  <td className="px-4 py-2 border">{schedule.cow}</td>
+                  <td className="px-4 py-2 border">{schedule.buffalo}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Nutrients */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-semibold text-green-700 mb-3">Nutrients</h2>
+        <p className="text-gray-700">{product.nutrients}</p>
+      </div>
+
+      {/* Ingredients */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-semibold text-green-700 mb-3">Ingredients</h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-1">
+          {product.ingredients.map((ingredient, index) => (
+            <li key={index}>{ingredient}</li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Benefits */}
+      <div className="mb-8">
+        <h2 className="text-2xl font-semibold text-green-700 mb-3">Benefits</h2>
+        <ul className="list-disc list-inside text-gray-700 space-y-1">
+          {product.benefits.map((benefit, index) => (
+            <li key={index}>{benefit}</li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Note */}
+      <p className="text-lg text-red-600 font-medium mt-6 bg-red-50 p-4 rounded-md border border-red-200">
+        <strong>Note:</strong> {product.note}
+      </p>
     </div>
   );
 };
 
-export default ProductDetail;
+export default ProductDetails;
