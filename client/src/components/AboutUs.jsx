@@ -116,15 +116,7 @@ const AboutUs = () => {
         <MissionVision />
       </motion.div>
 
-      {/* ✅ Cattle Feed Production Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <CattleFeedProduction />
-      </motion.div>
+     
     </div>
   );
 };

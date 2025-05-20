@@ -13,7 +13,7 @@ const Navbar = () => {
     { name: 'About us', path: '/aboutus' },
     { name: 'Products', path: '/products' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Sister Company', path: 'https://betulbiofuel.com/', external: true },
+    // { name: 'Sister Company', path: 'https://betulbiofuel.com/', external: true },
   ];
 
   return (

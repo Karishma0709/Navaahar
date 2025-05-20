@@ -50,7 +50,7 @@ const HeroSection = () => {
           whileHover={{ scale: 1.1, boxShadow: "0px 0px 10px rgba(34, 197, 94, 0.7)" }}
           whileTap={{ scale: 0.9 }}
           className="mt-6 px-6 py-3 bg-green-600 text-white rounded-lg text-lg font-semibold relative overflow-hidden transition duration-300 hover:bg-green-700 group"
-          onClick={() => navigate("/about us")}
+          onClick={() => navigate("/aboutus")}
         >
           <span className="absolute bottom-0 left-0 w-full h-0 bg-white opacity-20 transition-all duration-300 group-hover:h-full"></span>
           <span className="relative z-10">Learn More</span>

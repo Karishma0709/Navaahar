@@ -76,7 +76,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="hover:text-yellow-400 transition-all duration-300"
               >
-                Betul Biofuel Pvt. Ltd., 2nd Floor Old LIC Building, Gurudwaraganj, Betul (M.P.) - 462001
+                Betul Biofuel Pvt. Ltd., 2nd Floor Old LIC Building, Gurudwaraganj, Betul (M.P.) - 460001
               </a>
             </li>
             <li className="flex flex-col md:flex-row items-center md:items-start md:gap-2">
@@ -88,7 +88,7 @@ const Footer = () => {
             <li className="flex flex-col md:flex-row items-center md:items-start md:gap-2">
               <AiOutlineMail className="text-xl mb-1 md:mb-0" />
               <a href="mailto:hr.navaahaar@betulbiofuel.com" className="hover:text-yellow-400 transition-all duration-300">
-              hr.navaahaar@betulbiofuel.com
+              sales.navaahaar@betulbiofuel.com
               </a>
             </li>
           </ul>
