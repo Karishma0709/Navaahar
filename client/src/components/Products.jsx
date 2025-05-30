@@ -16,7 +16,7 @@ export const products = [
     price: "₹850",
     image: p1,
     description:
-      "High-protein pellet feed for cattle, ensuring better digestion and milk production.",
+      "उच्च प्रोटीन, वसा एवं खनिज तत्वों से भरपूर सुपाच्य टाइप-2 पशु आहार।",
     nutrients: "Protein 18%, Fiber 10%, Fat 4%, Calcium 1.2%, Phosphorus 0.8%", // ✅ Add nutrients
     instructions: {
       usage: [
@@ -129,7 +129,7 @@ export const products = [
     price: "₹1,200",
     image: p3,
     description:
-      "Balanced feed with essential vitamins and nutrients for high milk yield and energy.",
+      "उच्च प्रोटीन, वसा एवं खनिज तत्वों से भरपूर सुपाच्य टाइप-1 पशु आहार।",
     nutrients: "Protein 20%, Fiber 9%, Fat 5%, Calcium 1.3%, Phosphorus 0.9%",
     instructions: {
       usage: [

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import CattleFeedProduction from "./CattleFeedProduction";
 import MissionVision from "./MissionVision";
-import img1 from "../assets/about.jpg"; // ✅ Single Image
+import about from "../assets/about.mp4"; // ✅ Single Image
 import bg2 from "../assets/bg2.mov"; // ✅ Background video
 
 const AboutUs = () => {
@@ -61,11 +61,15 @@ const AboutUs = () => {
           viewport={{ once: true }}
           className="w-full flex justify-center"
         >
-          <img
-            src={img1}
-            alt="About Image"
-            className="w-[300px] h-[350px] sm:w-[400px] sm:h-[450px] md:w-[500px] md:h-[550px] object-cover rounded-xl shadow-lg md:mt-14"
-          />
+       <video
+  src={about}
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="w-[300px] h-[350px] sm:w-[400px] sm:h-[450px] md:w-[500px] md:h-[550px] object-cover rounded-xl shadow-lg md:mt-14"
+/>
+
         </motion.div>
 
         {/* ✅ Text */}
