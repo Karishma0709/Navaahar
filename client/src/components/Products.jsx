@@ -12,7 +12,7 @@ export const products = [
   // ✅ Export products array also
   {
     id: 1,
-    name: "Super Pellet",
+    name: "सुपर पैलेट",
     price: "₹850",
     image: p1,
     description:
@@ -20,220 +20,296 @@ export const products = [
     nutrients: "Protein 18%, Fiber 10%, Fat 4%, Calcium 1.2%, Phosphorus 0.8%", // ✅ Add nutrients
     instructions: {
       usage: [
-        "Soak it in water half to one hour before feeding. After that, mix it with dry fodder or straw before feeding. Dry cattle feed can also be given.",
-        "Small animals should be given 0.5 kg to 2 kg of feed per day, depending on their age and weight."
+        " सुपर पैलेट को खिलाने से एक या आधा घंटा पहले पानी में भिगो दें।",
+        "इसके बाद इसे सूखे चारे या भूसे में अच्छी तरह मिलाकर पशु को खिलाएं।",
+        "सूखे पशु आहार के साथ भी इसका उपयोग किया जा सकता है।",
       ],
+
       feedingSchedule: [
         {
-          type: "For Animal Health",
-          cow: "1.5 – 2 kg",
-          buffalo: "2 – 2.5 kg",
+          type: "पशु स्वास्थ्य के लिए",
+          cow: "1.5 - 2 किग्रा",
+          buffalo: "2 - 2.5 किग्रा",
         },
         {
-          type: "For Milk Production",
+          type: "पशु दूध उत्पाद के लिए",
           cow: "400 gm",
           buffalo: "500 gm",
         },
         {
-          type: "Pregnant Animal (Last 3 Months)",
+          type: "गर्भावस्था के लिए (आख़िरी तीन महीनों में)",
           cow: "1.5 kg",
           buffalo: "1.5 kg",
         },
       ],
     },
     benefits: [
-      "Increases milk production.",
-      "Improves animal health.",
-      "Enhances the digestibility of feed.",
-      "Improves reproductive capacity.",
-      "Prevents deficiency of minerals and vitamins.",
-      "Strengthens bones.",
-      "Improves the body structure of animals."
+      "रोग प्रतिरोधक क्षमता में वृद्धि",
+      "पाचन तंत्र को सशक्त बनाए",
+      "थकान और कमजोरी में कमी",
+      "स्वस्थ त्वचा व चमकदार बाल",
+      "अधिक दूध उत्पादन और गुणवत्ता में सुधार",
     ],
     ingredients: [
-      "Cottonseed cake",
-      "Mustard cake",
-      "Corn",
-      "Wheat bran",
-      "Minerals",
-      "Salt",
-      "Soybean meal",
-      "Gram husk",
-      "Calcium",
-      "Vitamins",
-      "Rice bran",
-      "De-oiled rice bran",
+      "मक्का",
+      "गेहूं",
+      "सोयाबीन चुरा",
+      "गुड़ का शीरा",
+      "जौ",
+      "सरसों खली",
+      "सेंधा नमक",
+      "मीठा सोडा",
+      "मूंगफली खली",
+      "चावल की छिलका",
+      "कैल्शियम",
+      " बिलौना खली",
+      " खनिज मिश्रण ",
     ],
-    note: "Feed supplement only, not to be used as medicine. For best results, use regularly.",
+    composition: [
+      { ingredient: "Crude Protein Min.", specification: "20.0 %" },
+      { ingredient: "Crude Fibre Max.", specification: "7.0 %" },
+      { ingredient: "Crude Fat Min.", specification: "4.0 %" },
+      { ingredient: "Sand Silica Max.", specification: "3.0 %" },
+      { ingredient: "Moisture Max.", specification: "11.0 %" },
+      // { ingredient: "Acid Insoluble Ash Max.", specification: "4.0 %" },
+      { ingredient: "Calcium", specification: "0.8%" },
+      { ingredient: "Total Phosphorus", specification: "0.50%" },
+      { ingredient: "Vitamin A", specification: "7,000 IU/kg" },
+      { ingredient: "Vitamin D3", specification: "1,200 IU/kg" },
+      { ingredient: "Vitamin E", specification: "30 mg/kg" },
+      { ingredient: "Salt", specification: "1.0%" },
+   
+    ],
+    note: [
+      " ठंडी और सूखी जगह पर स्टोर करें",
+      "बासी या फफूंद लगी सामग्री का उपयोग न करें",
+    ],
   },
   {
     id: 2,
-    name: "Mava Mix ",
-    price: "₹950",
+    name: "मावा मिक्स",
+    price: "₹850",
     image: p2,
     description:
-      "A highly digestible feed rich in minerals and vitamins for your beloved animals.",
-    nutrients: "Protein 16%, Fiber 12%, Fat 3%, Calcium 1.1%, Phosphorus 0.7%",
+      "उच्च प्रोटीन, वसा एवं खनिज तत्वों से भरपूर सुपाच्य टाइप-2 पशु आहार।",
+    nutrients: "Protein 18%, Fiber 10%, Fat 4%, Calcium 1.2%, Phosphorus 0.8%", // ✅ Add nutrients
     instructions: {
       usage: [
-        "Soak it in water half to one hour before feeding. After that, mix it with dry fodder or straw before feeding. Dry cattle feed can also be given.",
-        "Small animals should be given 0.5 kg to 2 kg of feed per day, depending on their age and weight."
+        " सुपर पैलेट को खिलाने से एक या आधा घंटा पहले पानी में भिगो दें।",
+        "इसके बाद इसे सूखे चारे या भूसे में अच्छी तरह मिलाकर पशु को खिलाएं।",
+        "सूखे पशु आहार के साथ भी इसका उपयोग किया जा सकता है।",
       ],
+
       feedingSchedule: [
         {
-          type: "For Animal Health",
-          cow: "1.5 – 2 kg",
-          buffalo: "2 – 2.5 kg",
+          type: "पशु स्वास्थ्य के लिए",
+          cow: "1.5 - 2 किग्रा",
+          buffalo: "2 - 2.5 किग्रा",
         },
         {
-          type: "For Milk Production",
+          type: "पशु दूध उत्पाद के लिए",
           cow: "400 gm",
           buffalo: "500 gm",
         },
         {
-          type: "Pregnant Animal (Last 3 Months)",
+          type: "गर्भावस्था के लिए (आख़िरी तीन महीनों में)",
           cow: "1.5 kg",
           buffalo: "1.5 kg",
         },
       ],
     },
     benefits: [
-      "Increases milk production.",
-      "Improves animal health.",
-      "Enhances the digestibility of feed.",
-      "Improves reproductive capacity.",
-      "Prevents deficiency of minerals and vitamins.",
-      "Strengthens bones.",
-      "Improves the body structure of animals."
+      "रोग प्रतिरोधक क्षमता में वृद्धि",
+      "पाचन तंत्र को सशक्त बनाए",
+      "थकान और कमजोरी में कमी",
+      "स्वस्थ त्वचा व चमकदार बाल",
+      "अधिक दूध उत्पादन और गुणवत्ता में सुधार",
     ],
     ingredients: [
-      "Cottonseed cake",
-      "Mustard cake",
-      "Corn",
-      "Wheat bran",
-      "Minerals",
-      "Salt",
-      "Soybean meal",
-      "Gram husk",
-      "Calcium",
-      "Vitamins",
-      "Rice bran",
-      "De-oiled rice bran",
+      "मक्का",
+      "गेहूं",
+      "सोयाबीन चुरा",
+      "गुड़ का शीरा",
+      "जौ",
+      "सरसों खली",
+      "सेंधा नमक",
+      "मीठा सोडा",
+      "मूंगफली खली",
+      "चावल की छिलका",
+      "कैल्शियम",
+      " बिलौना खली",
+      " खनिज मिश्रण ",
     ],
-    note: "Feed supplement only, not to be used as medicine. For best results, use regularly.",
+    composition: [
+      { ingredient: "Crude Protein Min.", specification: "20.0 %" },
+      { ingredient: "Crude Fibre Max.", specification: "7.0 %" },
+      { ingredient: "Crude Fat Min.", specification: "4.0 %" },
+      { ingredient: "Sand Silica Max.", specification: "3.0 %" },
+      { ingredient: "Moisture Max.", specification: "11.0 %" },
+      // { ingredient: "Acid Insoluble Ash Max.", specification: "4.0 %" },
+      { ingredient: "Calcium", specification: "0.8%" },
+      { ingredient: "Total Phosphorus", specification: "0.50%" },
+      { ingredient: "Vitamin A", specification: "7,000 IU/kg" },
+      { ingredient: "Vitamin D3", specification: "1,200 IU/kg" },
+      { ingredient: "Vitamin E", specification: "30 mg/kg" },
+      { ingredient: "Salt", specification: "1.0%" },
+   
+    ],
+    note: [
+      " ठंडी और सूखी जगह पर स्टोर करें",
+      "बासी या फफूंद लगी सामग्री का उपयोग न करें",
+    ],
   },
-  
+
   {
     id: 3,
-    name: "Supreme Gold ",
-    price: "₹1,200",
+    name: "सुप्रीम गोल्ड",
+    price: "₹850",
     image: p3,
     description:
-      "उच्च प्रोटीन, वसा एवं खनिज तत्वों से भरपूर सुपाच्य टाइप-1 पशु आहार।",
-    nutrients: "Protein 20%, Fiber 9%, Fat 5%, Calcium 1.3%, Phosphorus 0.9%",
+      "उच्च प्रोटीन, वसा एवं खनिज तत्वों से भरपूर सुपाच्य टाइप-2 पशु आहार।",
+    nutrients: "Protein 18%, Fiber 10%, Fat 4%, Calcium 1.2%, Phosphorus 0.8%", // ✅ Add nutrients
     instructions: {
       usage: [
-        "Soak it in water half to one hour before feeding. After that, mix it with dry fodder or straw before feeding. Dry cattle feed can also be given.",
-        "Small animals should be given 0.5 kg to 2 kg of feed per day, depending on their age and weight."
+        " सुपर पैलेट को खिलाने से एक या आधा घंटा पहले पानी में भिगो दें।",
+        "इसके बाद इसे सूखे चारे या भूसे में अच्छी तरह मिलाकर पशु को खिलाएं।",
+        "सूखे पशु आहार के साथ भी इसका उपयोग किया जा सकता है।",
       ],
+
       feedingSchedule: [
         {
-          type: "For Animal Health",
-          cow: "1.5 – 2 kg",
-          buffalo: "2 – 2.5 kg",
+          type: "पशु स्वास्थ्य के लिए",
+          cow: "1.5 - 2 किग्रा",
+          buffalo: "2 - 2.5 किग्रा",
         },
         {
-          type: "For Milk Production",
+          type: "पशु दूध उत्पाद के लिए",
           cow: "400 gm",
           buffalo: "500 gm",
         },
         {
-          type: "Pregnant Animal (Last 3 Months)",
+          type: "गर्भावस्था के लिए (आख़िरी तीन महीनों में)",
           cow: "1.5 kg",
           buffalo: "1.5 kg",
         },
       ],
     },
     benefits: [
-      "Increases milk production.",
-      "Improves animal health.",
-      "Enhances the digestibility of feed.",
-      "Improves reproductive capacity.",
-      "Prevents deficiency of minerals and vitamins.",
-      "Strengthens bones.",
-      "Improves the body structure of animals."
+      "रोग प्रतिरोधक क्षमता में वृद्धि",
+      "पाचन तंत्र को सशक्त बनाए",
+      "थकान और कमजोरी में कमी",
+      "स्वस्थ त्वचा व चमकदार बाल",
+      "अधिक दूध उत्पादन और गुणवत्ता में सुधार",
     ],
     ingredients: [
-      "Cottonseed cake",
-      "Mustard cake",
-      "Corn",
-      "Wheat bran",
-      "Minerals",
-      "Salt",
-      "Soybean meal",
-      "Gram husk",
-      "Calcium",
-      "Vitamins",
-      "Rice bran",
-      "De-oiled rice bran",
+      "मक्का",
+      "गेहूं",
+      "सोयाबीन चुरा",
+      "गुड़ का शीरा",
+      "जौ",
+      "सरसों खली",
+      "सेंधा नमक",
+      "मीठा सोडा",
+      "मूंगफली खली",
+      "चावल की छिलका",
+      "कैल्शियम",
+      " बिलौना खली",
+      " खनिज मिश्रण ",
     ],
-    note: "Feed supplement only, not to be used as medicine. For best results, use regularly.",
+    composition: [
+      { ingredient: "Crude Protein Min.", specification: "20.0 %" },
+      { ingredient: "Crude Fibre Max.", specification: "7.0 %" },
+      { ingredient: "Crude Fat Min.", specification: "4.0 %" },
+      { ingredient: "Sand Silica Max.", specification: "3.0 %" },
+      { ingredient: "Moisture Max.", specification: "11.0 %" },
+      // { ingredient: "Acid Insoluble Ash Max.", specification: "4.0 %" },
+      { ingredient: "Calcium", specification: "0.8%" },
+      { ingredient: "Total Phosphorus", specification: "0.50%" },
+      { ingredient: "Vitamin A", specification: "7,000 IU/kg" },
+      { ingredient: "Vitamin D3", specification: "1,200 IU/kg" },
+      { ingredient: "Vitamin E", specification: "30 mg/kg" },
+      { ingredient: "Salt", specification: "1.0%" },
+   
+    ],
+    note: [
+      " ठंडी और सूखी जगह पर स्टोर करें",
+      "बासी या फफूंद लगी सामग्री का उपयोग न करें",
+    ],
   },
   {
     id: 4,
-    name: "Dudh Malai",
-    price: "₹1,300",
+    name: "दूध मलाई",
+    price: "₹850",
     image: p4,
     description:
-      "Premium quality feed enriched with minerals for optimal cattle performance.",
-    nutrients: "Protein 22%, Fiber 8%, Fat 5%, Calcium 1.5%, Phosphorus 1.0%",
+      "उच्च प्रोटीन, वसा एवं खनिज तत्वों से भरपूर सुपाच्य टाइप-2 पशु आहार।",
+    nutrients: "Protein 18%, Fiber 10%, Fat 4%, Calcium 1.2%, Phosphorus 0.8%", // ✅ Add nutrients
     instructions: {
       usage: [
-        "Soak it in water half to one hour before feeding. After that, mix it with dry fodder or straw before feeding. Dry cattle feed can also be given.",
-        "Small animals should be given 0.5 kg to 2 kg of feed per day, depending on their age and weight."
+        " सुपर पैलेट को खिलाने से एक या आधा घंटा पहले पानी में भिगो दें।",
+        "इसके बाद इसे सूखे चारे या भूसे में अच्छी तरह मिलाकर पशु को खिलाएं।",
+        "सूखे पशु आहार के साथ भी इसका उपयोग किया जा सकता है।",
       ],
+
       feedingSchedule: [
         {
-          type: "For Animal Health",
-          cow: "1.5 – 2 kg",
-          buffalo: "2 – 2.5 kg",
+          type: "पशु स्वास्थ्य के लिए",
+          cow: "1.5 - 2 किग्रा",
+          buffalo: "2 - 2.5 किग्रा",
         },
         {
-          type: "For Milk Production",
+          type: "पशु दूध उत्पाद के लिए",
           cow: "400 gm",
           buffalo: "500 gm",
         },
         {
-          type: "Pregnant Animal (Last 3 Months)",
+          type: "गर्भावस्था के लिए (आख़िरी तीन महीनों में)",
           cow: "1.5 kg",
           buffalo: "1.5 kg",
         },
       ],
     },
     benefits: [
-      "Increases milk production.",
-      "Improves animal health.",
-      "Enhances the digestibility of feed.",
-      "Improves reproductive capacity.",
-      "Prevents deficiency of minerals and vitamins.",
-      "Strengthens bones.",
-      "Improves the body structure of animals."
+      "रोग प्रतिरोधक क्षमता में वृद्धि",
+      "पाचन तंत्र को सशक्त बनाए",
+      "थकान और कमजोरी में कमी",
+      "स्वस्थ त्वचा व चमकदार बाल",
+      "अधिक दूध उत्पादन और गुणवत्ता में सुधार",
     ],
     ingredients: [
-      "Cottonseed cake",
-      "Mustard cake",
-      "Corn",
-      "Wheat bran",
-      "Minerals",
-      "Salt",
-      "Soybean meal",
-      "Gram husk",
-      "Calcium",
-      "Vitamins",
-      "Rice bran",
-      "De-oiled rice bran",
+      "मक्का",
+      "गेहूं",
+      "सोयाबीन चुरा",
+      "गुड़ का शीरा",
+      "जौ",
+      "सरसों खली",
+      "सेंधा नमक",
+      "मीठा सोडा",
+      "मूंगफली खली",
+      "चावल की छिलका",
+      "कैल्शियम",
+      " बिलौना खली",
+      " खनिज मिश्रण ",
     ],
-    note: "Feed supplement only, not to be used as medicine. For best results, use regularly.",
+    composition: [
+      { ingredient: "Crude Protein Min.", specification: "20.0 %" },
+      { ingredient: "Crude Fibre Max.", specification: "7.0 %" },
+      { ingredient: "Crude Fat Min.", specification: "4.0 %" },
+      { ingredient: "Sand Silica Max.", specification: "3.0 %" },
+      { ingredient: "Moisture Max.", specification: "11.0 %" },
+      // { ingredient: "Acid Insoluble Ash Max.", specification: "4.0 %" },
+      { ingredient: "Calcium", specification: "0.8%" },
+      { ingredient: "Total Phosphorus", specification: "0.50%" },
+      { ingredient: "Vitamin A", specification: "7,000 IU/kg" },
+      { ingredient: "Vitamin D3", specification: "1,200 IU/kg" },
+      { ingredient: "Vitamin E", specification: "30 mg/kg" },
+      { ingredient: "Salt", specification: "1.0%" },
+   
+    ],
+    note: [
+      " ठंडी और सूखी जगह पर स्टोर करें",
+      "बासी या फफूंद लगी सामग्री का उपयोग न करें",
+    ],
   },
 ];
 
@@ -288,7 +364,6 @@ const Product = () => {
           </h2>
         </div>
 
-        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {products.map((product, index) => (
             <motion.div
@@ -323,8 +398,8 @@ const Product = () => {
           ))}
         </div>
       </motion.div>
-       {/* ✅ Cattle Feed Production Section */}
-       <motion.div
+      {/* ✅ Cattle Feed Production Section */}
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
