@@ -70,27 +70,39 @@ const ProductDetails = () => {
       </div>
 
       {/* Composition */}
-      <div className="bg-gray-50 p-6 rounded-lg shadow">
-        <h2 className="text-2xl font-semibold text-green-700 mb-4">COMPOSITION</h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
-            <thead className="bg-green-100 text-green-900">
-              <tr>
-                <th className="px-4 py-2 border">INGREDIENT</th>
-                <th className="px-4 py-2 border">SPECIFICATION</th>
-              </tr>
-            </thead>
-            <tbody>
-              {product.composition.map((comp, index) => (
-                <tr key={index} className="text-center text-gray-800 hover:bg-gray-100">
-                  <td className="px-4 py-2 border font-medium">{comp.ingredient}</td>
-                  <td className="px-4 py-2 border">{comp.specification}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
+    
+{/* Composition */}
+{product.composition && product.composition.length > 0 && (
+  <div className="bg-gray-50 p-6 rounded-lg shadow">
+    <h2 className="text-2xl font-semibold text-green-700 mb-4">COMPOSITION</h2>
+    <div className="overflow-x-auto">
+      <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
+        <thead className="bg-green-100 text-green-900">
+          <tr>
+            <th className="px-4 py-2 border">INGREDIENT</th>
+            {/* Only show SPECIFICATION column if not 'मावा मिक्स' */}
+            {product.name !== "मावा मिक्स" && (
+              <th className="px-4 py-2 border">SPECIFICATION</th>
+            )}
+          </tr>
+        </thead>
+        <tbody>
+          {product.composition.map((comp, index) => (
+            <tr key={index} className="text-center text-gray-800 hover:bg-gray-100">
+              <td className="px-4 py-2 border font-medium">{comp.ingredient}</td>
+              {/* Only show specification if not 'मावा मिक्स' */}
+              {product.name !== "मावा मिक्स" && (
+                <td className="px-4 py-2 border">{comp.specification}</td>
+              )}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+)}
+
+
 
       {/* Benefits */}
       <div className="bg-gray-50 p-6 rounded-lg shadow">
