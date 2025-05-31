@@ -1,53 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./ContactUs.module.css";
 import bg5 from "../assets/bg5.mov";
 
 const ContactUs = () => {
-  const [data, setData] = useState({
-    name: "",
-    numberMobile: "",
-    email: "",
-    msg: "",
-  });
-
-  const [status, setStatus] = useState(""); // Success/Error Message
-
-  const handleOnChange = (e) => {
-    const { name, value } = e.target;
-    setData({
-      ...data,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setStatus("Sending...");
-
-    try {
-      const response = await fetch("http://localhost:5000/api/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-      console.log("Response:", result);
-
-      if (response.ok) {
-        setStatus("✅ Message sent successfully!");
-        setData({ name: "", numberMobile: "", email: "", msg: "" }); // Reset form
-      } else {
-        setStatus("❌ Failed to send message. Please try again.");
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      setStatus("❌ Something went wrong. Please try again.");
-    }
-  };
-
   return (
     <div className="min-h-screen bg-gray-100">
       {/* ✅ Banner Section */}
@@ -69,18 +24,19 @@ const ContactUs = () => {
           <h2 className="text-3xl font-bold text-green-700 mb-3 relative text-center">
             Contact Us
           </h2>
-          {/* ✅ Gradient Underline */}
           <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-green-600 mx-auto mb-6"></div>
 
-          <form className={`${styles.form} bg-white p-6 rounded-lg shadow-lg`} onSubmit={handleSubmit}>
+          <form
+            className={`${styles.form} bg-white p-6 rounded-lg shadow-lg`}
+            action="https://formspree.io/f/yourFormID" // 🔁 Replace with your Formspree form ID
+            method="POST"
+          >
             <div className="mb-4">
               <label className="block text-green-800 font-semibold mb-2">Name</label>
               <input
                 type="text"
                 name="name"
                 placeholder="Your Name"
-                value={data.name}
-                onChange={handleOnChange}
                 required
                 className="w-full p-3 border border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
               />
@@ -91,8 +47,6 @@ const ContactUs = () => {
                 type="tel"
                 name="numberMobile"
                 placeholder="Your Number"
-                value={data.numberMobile}
-                onChange={handleOnChange}
                 required
                 className="w-full p-3 border border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
               />
@@ -103,8 +57,6 @@ const ContactUs = () => {
                 type="email"
                 name="email"
                 placeholder="Your Email"
-                value={data.email}
-                onChange={handleOnChange}
                 required
                 className="w-full p-3 border border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
               />
@@ -115,19 +67,17 @@ const ContactUs = () => {
                 name="msg"
                 placeholder="Your Message"
                 rows="5"
-                value={data.msg}
-                onChange={handleOnChange}
                 required
                 className="w-full p-3 border border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
               ></textarea>
             </div>
-            <button type="submit" className="w-full bg-green-600 text-white py-3 rounded hover:bg-green-700 transition duration-300">
+            <button
+              type="submit"
+              className="w-full bg-green-600 text-white py-3 rounded hover:bg-green-700 transition duration-300"
+            >
               Send Message
             </button>
           </form>
-
-          {/* ✅ Status Message */}
-          {status && <p className="mt-4 text-center font-semibold text-green-700">{status}</p>}
         </div>
 
         {/* Contact Details & Google Map */}
@@ -135,7 +85,7 @@ const ContactUs = () => {
           <h2 className="text-3xl font-bold text-green-700 mb-3 text-center">
             Our Location
           </h2>
-          
+
           <p className="text-green-800 mb-4"><span className="font-bold">Timing:</span> 9:00 AM to 6:00 PM</p>
           <p className="text-green-800 mb-4">
             <span className="font-bold">Office:</span> Betul Biofuel Pvt. Ltd., 2nd Floor Old LIC Building, Gurudwaraganj, Betul (M.P.)
