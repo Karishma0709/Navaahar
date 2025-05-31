@@ -1,37 +1,42 @@
 import React from "react";
 import { motion } from "framer-motion"; // ✅ Import motion for animations
 import { FaSeedling, FaLeaf, FaIndustry, FaTruck, FaCheckCircle } from "react-icons/fa";
+import selectingRM from "../assets/selectingRM.webp"
+import gandM from "../assets/gandM.jpeg"
+import Qualitylab from "../assets/Qualitylab.jpeg"
+import Pelletizing from "../assets/Pelletizing.jpeg"
+import packingandDistribution from "../assets/packingandDistribution.webp"
 
 const steps = [
   {
     title: "1. Selecting Raw Materials",
     icon: <FaSeedling />,
     description: "Choose high-quality ingredients like corn, soybean meal, barley, and vitamins.",
-    image: "https://via.placeholder.com/300",
+    image: selectingRM,
   },
   {
     title: "2. Grinding & Mixing",
     icon: <FaLeaf />,
     description: "Grind raw materials into small particles and mix evenly to maintain nutrition balance.",
-    image: "https://via.placeholder.com/300",
+    image: gandM,
   },
   {
     title: "3. Pelletizing Process",
     icon: <FaIndustry />,
     description: "Use a pellet machine to compress the mixture into uniform pellets for easy digestion.",
-    image: "https://via.placeholder.com/300",
+    image: Pelletizing,
   },
   {
     title: "4. Quality Testing",
     icon: <FaCheckCircle />,
     description: "Check protein levels, moisture content, and hygiene standards before packaging.",
-    image: "https://via.placeholder.com/300",
+    image: Qualitylab,
   },
   {
     title: "5. Packaging & Distribution",
     icon: <FaTruck />,
     description: "Pack the feed in airtight bags and distribute it to farmers and suppliers.",
-    image: "https://via.placeholder.com/300",
+    image:packingandDistribution,
   },
 ];
 
