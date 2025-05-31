@@ -92,7 +92,7 @@ const ContactUs = () => {
           </p>
           <p className="text-green-800 mb-4"><span className="font-bold">Pincode:</span> 462001</p>
           <p className="text-green-800 mb-4"><span className="font-bold">Phone:</span> +91 74150 01555</p>
-          <p className="text-green-800 mb-4"><span className="font-bold">Email:</span> hr.navaahaar@betulbiofuel.com</p>
+          <p className="text-green-800 mb-4"><span className="font-bold">Email:</span> sales.navaahaar@betulbiofuel.com</p>
 
           {/* Google Map */}
           <div className={`${styles.map} w-full h-64 bg-green-100 mt-6 rounded-lg overflow-hidden`}>
