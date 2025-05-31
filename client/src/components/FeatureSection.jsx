@@ -35,7 +35,12 @@ const FeatureSection = () => {
           transition={{ duration: 0.8 }}
           className="lg:w-1/2"
         >
-          <img src={product} alt="Features" className="w-full rounded-2xl shadow-lg" />
+          <img
+  src={product}
+  alt="Features"
+  className="w-full max-w-md h-auto rounded-2xl shadow-lg object-contain mx-auto"
+/>
+
         </motion.div>
 
         {/* ✅ Right Side Features */}
