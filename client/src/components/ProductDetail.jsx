@@ -7,7 +7,9 @@ const ProductDetails = () => {
   const product = products.find((p) => p.id === parseInt(id));
 
   if (!product) {
-    return <div className="text-center text-red-600 mt-10">Product not found.</div>;
+    return (
+      <div className="text-center text-red-600 mt-10">Product not found.</div>
+    );
   }
 
   return (
@@ -22,7 +24,9 @@ const ProductDetails = () => {
 
       {/* Key Instructions */}
       <div className="bg-gray-50 p-6 rounded-lg shadow">
-        <h2 className="text-2xl font-semibold text-green-700 mb-4">खास बातें</h2>
+        <h2 className="text-2xl font-semibold text-green-700 mb-4">
+          खास बातें
+        </h2>
         <ul className="list-disc list-inside text-gray-700 space-y-1">
           {product.instructions.usage.map((line, index) => (
             <li key={index}>{line}</li>
@@ -32,7 +36,9 @@ const ProductDetails = () => {
 
       {/* Feeding Schedule */}
       <div className="bg-gray-50 p-6 rounded-lg shadow">
-        <h2 className="text-2xl font-semibold text-green-700 mb-4">दैनिक खुराक</h2>
+        <h2 className="text-2xl font-semibold text-green-700 mb-4">
+          दैनिक खुराक
+        </h2>
         <div className="overflow-x-auto">
           <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
             <thead className="bg-green-100 text-green-900">
@@ -44,8 +50,13 @@ const ProductDetails = () => {
             </thead>
             <tbody>
               {product.instructions.feedingSchedule.map((schedule, index) => (
-                <tr key={index} className="text-center text-gray-800 hover:bg-gray-100">
-                  <td className="px-4 py-2 border font-medium">{schedule.type}</td>
+                <tr
+                  key={index}
+                  className="text-center text-gray-800 hover:bg-gray-100"
+                >
+                  <td className="px-4 py-2 border font-medium">
+                    {schedule.type}
+                  </td>
                   <td className="px-4 py-2 border">{schedule.cow}</td>
                   <td className="px-4 py-2 border">{schedule.buffalo}</td>
                 </tr>
@@ -56,53 +67,64 @@ const ProductDetails = () => {
       </div>
 
       {/* Ingredients */}
-      <div className="bg-gray-50 p-6 rounded-lg shadow">
-        <h2 className="text-2xl font-semibold text-green-700 mb-4">
-          पशु आहार में उपयोग की गई सामग्री
-        </h2>
-        <div className="columns-2 md:columns-3 gap-4">
-          {product.ingredients.map((ingredient, index) => (
-            <div key={index} className="break-inside-avoid bg-white p-2 rounded shadow text-gray-700 mb-2">
-              {ingredient}
-            </div>
-          ))}
+      {/* Ingredients */}
+      {product.name !== "दूध मलाई" && product.ingredients?.length > 0 && (
+        <div className="bg-gray-50 p-6 rounded-lg shadow">
+          <h2 className="text-2xl font-semibold text-green-700 mb-4">
+            पशु आहार में उपयोग की गई सामग्री
+          </h2>
+          <div className="columns-2 md:columns-3 gap-4">
+            {product.ingredients.map((ingredient, index) => (
+              <div
+                key={index}
+                className="break-inside-avoid bg-white p-2 rounded shadow text-gray-700 mb-2"
+              >
+                {ingredient}
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Composition */}
-    
-{/* Composition */}
-{product.composition && product.composition.length > 0 && (
-  <div className="bg-gray-50 p-6 rounded-lg shadow">
-    <h2 className="text-2xl font-semibold text-green-700 mb-4">COMPOSITION</h2>
-    <div className="overflow-x-auto">
-      <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
-        <thead className="bg-green-100 text-green-900">
-          <tr>
-            <th className="px-4 py-2 border">INGREDIENT</th>
-            {/* Only show SPECIFICATION column if not 'मावा मिक्स' */}
-            {product.name !== "मावा मिक्स" && (
-              <th className="px-4 py-2 border">SPECIFICATION</th>
-            )}
-          </tr>
-        </thead>
-        <tbody>
-          {product.composition.map((comp, index) => (
-            <tr key={index} className="text-center text-gray-800 hover:bg-gray-100">
-              <td className="px-4 py-2 border font-medium">{comp.ingredient}</td>
-              {/* Only show specification if not 'मावा मिक्स' */}
-              {product.name !== "मावा मिक्स" && (
-                <td className="px-4 py-2 border">{comp.specification}</td>
-              )}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  </div>
-)}
 
-
+      {/* Composition */}
+      {product.composition && product.composition.length > 0 && (
+        <div className="bg-gray-50 p-6 rounded-lg shadow">
+          <h2 className="text-2xl font-semibold text-green-700 mb-4">
+            COMPOSITION
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="min-w-full bg-white border border-gray-300 rounded-lg shadow-sm">
+              <thead className="bg-green-100 text-green-900">
+                <tr>
+                  <th className="px-4 py-2 border">INGREDIENT</th>
+                  {/* Only show SPECIFICATION column if not 'मावा मिक्स' */}
+                  {product.name !== "मावा मिक्स" && (
+                    <th className="px-4 py-2 border">SPECIFICATION</th>
+                  )}
+                </tr>
+              </thead>
+              <tbody>
+                {product.composition.map((comp, index) => (
+                  <tr
+                    key={index}
+                    className="text-center text-gray-800 hover:bg-gray-100"
+                  >
+                    <td className="px-4 py-2 border font-medium">
+                      {comp.ingredient}
+                    </td>
+                    {/* Only show specification if not 'मावा मिक्स' */}
+                    {product.name !== "मावा मिक्स" && (
+                      <td className="px-4 py-2 border">{comp.specification}</td>
+                    )}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {/* Benefits */}
       <div className="bg-gray-50 p-6 rounded-lg shadow">
