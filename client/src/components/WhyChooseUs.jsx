@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { FaShieldAlt, FaHeadset, FaRupeeSign, FaLeaf } from "react-icons/fa";
-import why from "../assets/why2.webp"; // Ensure this path is correct
+import why from "../assets/why2.jpeg"; // Ensure this path is correct
 
 const reasons = [
   { id: 1, title: "Quality Assurance", description: "We ensure top-notch quality in all our products.", icon: <FaShieldAlt className="text-yellow-500 text-3xl" /> },
@@ -57,7 +57,7 @@ const WhyChooseUs = () => {
           <img
             src={why}
             alt="Why Choose Us"
-            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-green-600 shadow-lg overflow-hidden"
+            className="w-64 h-64 md:w-80 md:h-80 rounded-full object-cover overflow-hidden"
           />
         </motion.div>
 
