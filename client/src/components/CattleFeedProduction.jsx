@@ -5,7 +5,7 @@ import selectingRM from "../assets/selectingRM.webp"
 import gandM from "../assets/gandM.jpeg"
 import Qualitylab from "../assets/Qualitylab.jpeg"
 import Pelletizing from "../assets/Pelletizing.jpeg"
-import packingandDistribution from "../assets/packingandDistribution.webp"
+import packingandDistribution from "../assets/packingandDistribution.jpg"
 
 const steps = [
   {

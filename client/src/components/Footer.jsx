@@ -124,11 +124,20 @@ const Footer = () => {
           {/* Social Media Icons */}
           <div className="flex justify-center md:justify-start space-x-4 mt-4">
             {[
-              { icon: <TiSocialFacebook className="text-xl" />, link: "#" },
-              { icon: <AiFillInstagram className="text-xl" />, link: "#" },
-              { icon: <AiFillTwitterCircle className="text-xl" />, link: "#" },
-              { icon: <AiFillLinkedin className="text-xl" />, link: "#" },
-              { icon: <AiFillYoutube className="text-xl" />, link: "#" },
+              {
+                icon: <TiSocialFacebook className="text-xl" />,
+                link: " https://www.facebook.com/profile.php?id=61576065156844",
+              },
+              {
+                icon: <AiFillInstagram className="text-xl" />,
+                link: "https://www.instagram.com/navaahar_cattlefeed/",
+              },
+              // { icon: <AiFillTwitterCircle className="text-xl" />, link: "#" },
+              {
+                icon: <AiFillLinkedin className="text-xl" />,
+                link: "https://www.linkedin.com/company/navaahar-cattle-feed/posts/?feedView=all",
+              },
+              // { icon: <AiFillYoutube className="text-xl" />, link: "#" },
             ].map((item, index) => (
               <a
                 key={index}
