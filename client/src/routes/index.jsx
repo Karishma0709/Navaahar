@@ -1,56 +1,60 @@
-import { createBrowserRouter } from 'react-router-dom';
-import App from '../App';
-import Home from '../components/Home';
-import ContactUs from '../components/ContactUs';
-import Gallery from '../components/Gallery';
-import Product from '../components/Products';
-import AboutUs from '../components/AboutUs';
-import CareerPage from '../components/CareerPage';
-import ProductDetail from '../components/ProductDetail';
-import PrivacyPolicy from '../components/PrivacyPolicy';
+import { createBrowserRouter } from "react-router-dom";
+import App from "../App";
+import Home from "../components/Home";
+import ContactUs from "../components/ContactUs";
+import Gallery from "../components/Gallery";
+import Product from "../components/Products";
+import AboutUs from "../components/AboutUs";
+import CareerPage from "../components/CareerPage";
+import ProductDetail from "../components/ProductDetail";
+import PrivacyPolicy from "../components/PrivacyPolicy";
+import TermsAndConditions from "../components/TermsAndConditions";
 
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <App />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: 'home',
+        path: "home",
         element: <Home />,
       },
       {
-        path: 'contact',
-        element: <ContactUs/>,
+        path: "contact",
+        element: <ContactUs />,
       },
       {
-        path: 'gallery',
-        element: <Gallery/>,
+        path: "gallery",
+        element: <Gallery />,
       },
       {
-        path: 'products',
-        element: <Product/>,
+        path: "products",
+        element: <Product />,
       },
       {
-        path: 'aboutus',
-        element: <AboutUs/>,
+        path: "aboutus",
+        element: <AboutUs />,
       },
       {
-        path: 'career',
-        element: <CareerPage/>,
+        path: "career",
+        element: <CareerPage />,
       },
       {
-        path: '/product/:id',
-        element: <ProductDetail/>,
+        path: "/product/:id",
+        element: <ProductDetail />,
       },
-        {
-        path: '/privacy-policy',
-        element: <PrivacyPolicy/>,
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy />,
       },
-     
+       {
+        path: "/terms",
+        element: <TermsAndConditions />,
+      },
     ],
   },
 ]);

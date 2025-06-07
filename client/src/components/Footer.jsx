@@ -27,8 +27,7 @@ const Footer = () => {
             About
           </h2>
           <p className="text-white text-center md:text-left w-3/4">
-            Share store details, promotions, or brand content with your
-            customers.
+            At Navaahar, we believe healthy livestock means prosperous farmers.
           </p>
         </div>
 
