@@ -7,6 +7,7 @@ import Product from '../components/Products';
 import AboutUs from '../components/AboutUs';
 import CareerPage from '../components/CareerPage';
 import ProductDetail from '../components/ProductDetail';
+import PrivacyPolicy from '../components/PrivacyPolicy';
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
       {
         path: '/product/:id',
         element: <ProductDetail/>,
+      },
+        {
+        path: '/privacy-policy',
+        element: <PrivacyPolicy/>,
       },
      
     ],
