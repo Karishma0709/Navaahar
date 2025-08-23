@@ -9,7 +9,7 @@ import TestimonialSection from './TestimonialSection';
 const Home = () => {
   return (
    <>
-     
+
       <HeroSection/>
       <WhyChooseUs/>
       <ProductSlider/>
