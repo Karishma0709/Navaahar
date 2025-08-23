@@ -1,10 +1,10 @@
 import img1 from "../assets/images/IMG_1.JPG";
-import img2 from "../assets/images/IMG_2.JPG";
+// import img2 from "../assets/images/IMG_2.JPG";
 import img3 from "../assets/images/IMG_3.JPG";
 import img4 from "../assets/images/IMG_4.JPG";
 import img5 from "../assets/images/IMG_5.JPG";
 import img6 from "../assets/images/IMG_6.JPG";
-import img7 from "../assets/images/IMG_7.JPG";
+// import img7 from "../assets/images/IMG_7.JPG";
 import img8 from "../assets/images/IMG_8.JPG";
 import img9 from "../assets/images/IMG_9.JPG";
 // import img10 from "../assets/images/IMG_10.jpg";
@@ -13,7 +13,7 @@ import img12 from "../assets/images/IMG_12.JPG";
 import img13 from "../assets/images/IMG_13.JPG";
 import img14 from "../assets/images/IMG_14.JPG";
 import img15 from "../assets/images/IMG_15.JPG";
-import img16 from "../assets/images/IMG_16.JPG";
+// import img16 from "../assets/images/IMG_16.JPG";
 import img17 from "../assets/images/IMG_17.JPG";
 import img18 from "../assets/images/IMG_18.JPG";
 import img19 from "../assets/images/IMG_19.JPG";
@@ -40,12 +40,12 @@ import img39 from "../assets/images/IMG_39.JPG";
 
 const gallery = [
     { id: 1, url: img1 },
-    { id: 2, url: img2 },
+    // { id: 2, url: img2 },
     { id: 3, url: img3 },
     { id: 4, url: img4 },
     { id: 5, url: img5 },
     { id: 6, url: img6 },
-    { id: 7, url: img7 },
+    // { id: 7, url: img7 },
     { id: 8, url: img8 },
     { id: 9, url: img9 },
     // { id: 10, url: img10 },
@@ -54,7 +54,7 @@ const gallery = [
     { id: 13, url: img13 },
     { id: 14, url: img14 },
     { id: 15, url: img15 },
-    { id: 16, url: img16 },
+    // { id: 16, url: img16 },
     { id: 17, url: img17 },
     { id: 18, url: img18 },
     { id: 19, url: img19 },
