@@ -1,25 +1,34 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaClipboardCheck, FaCogs, FaChartLine } from "react-icons/fa";
+import qcImg from "../assets/images/IMG_13.jpg"; // apni image import karo
+import systemImg from "../assets/images/IMG_8.jpg";
+import trackingImg from "../assets/images/IMG_4.jpg";
 
 const processSteps = [
   {
     id: 1,
     title: "Step 1: Extensive QC",
-    description: "Every product undergoes multiple rounds of rigorous quality control checks to ensure premium standards.",
+    description:
+      "Every product undergoes multiple rounds of rigorous quality control checks to ensure premium standards.",
     icon: <FaClipboardCheck />,
+    image: qcImg,
   },
   {
     id: 2,
-    title: "Step 2: ⁠Automated system",
-    description: "We streamline operations using fully automated systems for maximum efficiency and minimal error.",
+    title: "Step 2: Automated system",
+    description:
+      "We streamline operations using fully automated systems for maximum efficiency and minimal error.",
     icon: <FaCogs />,
+    image: systemImg,
   },
   {
     id: 3,
-    title: "Step 3: ⁠Tracking system for sales",
-    description: "Our integrated tracking tools monitor sales in real-time, ensuring transparency and accountability.",
+    title: "Step 3: Tracking system for sales",
+    description:
+      "Our integrated tracking tools monitor sales in real-time, ensuring transparency and accountability.",
     icon: <FaChartLine />,
+    image: trackingImg,
   },
 ];
 
@@ -38,62 +47,52 @@ const ProcessSection = () => {
         <span className="block w-24 h-1 bg-gradient-to-r from-green-700 to-yellow-500 mx-auto mt-2"></span>
       </motion.h2>
 
-      {/* ✅ Timeline Container */}
-      <div className="relative max-w-6xl mx-auto">
-        {/* ✅ Vertical Line in Middle */}
-        <div className="absolute left-1/2 transform -translate-x-1/2 w-1 bg-green-500 h-full hidden lg:block"></div>
-
-        {/* ✅ Process Steps */}
-        <div className="flex flex-col space-y-12 relative">
-          {processSteps.map((step, index) => (
-            <div
-              key={step.id}
-              className={`relative flex items-center justify-between w-full ${
-                index % 2 === 0 ? "flex-row" : "flex-row-reverse"
-              }`}
+      {/* ✅ Steps with Image */}
+      <div className="space-y-16 max-w-6xl mx-auto">
+        {processSteps.map((step, index) => (
+          <div
+            key={step.id}
+            className={`flex flex-col lg:flex-row items-center gap-10 ${
+              index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+            }`}
+          >
+            {/* ✅ Text & Icon */}
+            <motion.div
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2 text-center lg:text-left"
             >
-              {/* ✅ Left Content */}
-              <motion.div
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-                className={`w-1/2 p-6 ${
-                  index % 2 === 0 ? "text-right" : "text-left"
-                }`}
-              >
-                <h3 className="text-xl font-bold text-green-800">
-                  {step.title}
-                </h3>
-                <p className="text-lg text-gray-600">{step.description}</p>
-              </motion.div>
-
-              {/* ✅ Middle Icon with Vertical Connector */}
-              <div className="relative flex flex-col items-center">
-                {/* ✅ Icon */}
-                <motion.div
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
-                  className="w-16 h-16 bg-green-600 text-white flex items-center justify-center rounded-full text-2xl shadow-lg z-10"
-                >
+              <div className="flex justify-center lg:justify-start mb-4">
+                <div className="w-16 h-16 bg-green-600 text-white flex items-center justify-center rounded-full text-2xl shadow-lg">
                   {step.icon}
-                </motion.div>
-
-                {/* ✅ Vertical Line */}
-                {index < processSteps.length - 1 && (
-                  <div className="w-1 h-10 bg-green-500"></div>
-                )}
+                </div>
               </div>
+              <h3 className="text-2xl font-bold text-green-800 mb-3">
+                {step.title}
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                {step.description}
+              </p>
+            </motion.div>
 
-           
-
-              {/* ✅ Right Empty Space */}
-              <div className="w-1/2"></div>
-            </div>
-          ))}
-        </div>
+            {/* ✅ Image */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="lg:w-1/2"
+            >
+              <img
+                src={step.image}
+                alt={step.title}
+                className="w-full h-64 object-cover rounded-xl shadow-md"
+              />
+            </motion.div>
+          </div>
+        ))}
       </div>
     </div>
   );

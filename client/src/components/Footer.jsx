@@ -154,8 +154,20 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom Section */}
-      <div className="border-t border-white mt-5 pt-5 flex flex-col md:flex-row justify-center md:justify-between items-center text-center">
-        <p className="text-white">Powered by Nathun Digital Solutions.</p>
+      {/* Footer Bottom Section */}
+      <div className="border-t border-white mt-5 pt-5 flex justify-center items-center text-center">
+        <p className="text-white">
+          Powered by{" "}
+          <a
+            href="https://nathundigitalsolutions.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold hover:text-yellow-400 transition-colors duration-300"
+          >
+            Nathun Digital Solutions
+          </a>
+          .
+        </p>
       </div>
     </footer>
   );

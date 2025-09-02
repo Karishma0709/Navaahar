@@ -1,7 +1,7 @@
-import React, { useState, useRef } from "react";
+import React/*, { useState, useRef }*/ from "react";
 import { motion } from "framer-motion";
 import Slider from "react-slick";
-import { FaQuoteLeft, FaTimes } from "react-icons/fa";
+import { FaQuoteLeft/*, FaTimes */} from "react-icons/fa";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import img from "../assets/testimonial.jpg";
@@ -12,30 +12,33 @@ const testimonials = [
     name: "राजेश कुमार",
     role: "डेयरी फार्म मालिक",
     image: img,
-    feedback: "इस पशु चारे का उपयोग करने के बाद मेरे दूध उत्पादन में काफी वृद्धि हुई है!",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    feedback:
+      "इस पशु चारे का उपयोग करने के बाद मेरे दूध उत्पादन में काफी वृद्धि हुई है!",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
   {
     id: 2,
     name: "मीरा सिंह",
     role: "जैविक किसान",
     image: img,
-    feedback: "उच्च गुणवत्ता वाला चारा जो प्राकृतिक तत्वों से बना है। मेरी गायें पहले से ज्यादा स्वस्थ हैं!",
-    video: "https://www.w3schools.com/html/movie.mp4",
+    feedback:
+      "उच्च गुणवत्ता वाला चारा जो प्राकृतिक तत्वों से बना है। मेरी गायें पहले से ज्यादा स्वस्थ हैं!",
+    // video: "https://www.w3schools.com/html/movie.mp4",
   },
   {
     id: 3,
     name: "अमित यादव",
     role: "पशु चिकित्सा विशेषज्ञ",
     image: img,
-    feedback: "मैं इस चारे को सभी किसानों को सुझाता हूँ। इसमें बहुत ही अच्छा पोषण मूल्य है!",
-    video: "https://www.w3schools.com/html/mov_bbb.mp4",
+    feedback:
+      "मैं इस चारे को सभी किसानों को सुझाता हूँ। इसमें बहुत ही अच्छा पोषण मूल्य है!",
+    // video: "https://www.w3schools.com/html/mov_bbb.mp4",
   },
 ];
 
 const TestimonialSection = () => {
-  const [selectedVideo, setSelectedVideo] = useState(null);
-  const videoRef = useRef(null);
+  // const [selectedVideo, setSelectedVideo] = useState(null);
+  // const videoRef = useRef(null);
 
   const settings = {
     dots: true,
@@ -48,13 +51,13 @@ const TestimonialSection = () => {
     arrows: false,
   };
 
-  const closeVideo = () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-    setSelectedVideo(null);
-  };
+  // const closeVideo = () => {
+  //   if (videoRef.current) {
+  //     videoRef.current.pause();
+  //     videoRef.current.currentTime = 0;
+  //   }
+  //   setSelectedVideo(null);
+  // };
 
   return (
     <div className="py-16 bg-green-50 relative z-0">
@@ -81,8 +84,8 @@ const TestimonialSection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 viewport={{ once: true }}
-                className="p-6 cursor-pointer"
-                onClick={() => setSelectedVideo(testimonial.video)}
+                className="p-6"
+                // onClick={() => setSelectedVideo(testimonial.video)}
               >
                 <div className="bg-white p-8 rounded-xl shadow-lg border border-green-300 flex flex-col items-center">
                   <FaQuoteLeft className="text-5xl text-green-600 mb-4" />
@@ -107,19 +110,16 @@ const TestimonialSection = () => {
         </div>
       </div>
 
-      {/* Video Modal */}
-      {selectedVideo && (
+      {/* Video Modal (disabled) */}
+      {/* {selectedVideo && (
         <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center px-4">
           <div className="relative bg-white rounded-lg p-4 shadow-xl max-w-[700px] w-full">
-            {/* Close Button */}
             <button
               onClick={closeVideo}
               className="absolute top-3 right-3 text-red-600 hover:text-red-800 text-2xl z-50"
             >
               <FaTimes />
             </button>
-
-            {/* Video */}
             <video
               ref={videoRef}
               src={selectedVideo}
@@ -129,7 +129,7 @@ const TestimonialSection = () => {
             />
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 };
