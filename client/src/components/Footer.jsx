@@ -58,28 +58,49 @@ const Footer = () => {
         </div>
 
         {/* Information Section */}
+        {/* Information Section */}
         <div className="text-center md:text-left">
           <h2 className="font-bold text-lg mb-3">Links</h2>
           <ul className="space-y-2">
             {[
-              { name: "Privacy Policy", path: "/privacy-policy" },
-              { name: "Terms And Conditions", path: "/terms" },
-              // { name: 'Return And Refund', path: '/return-policy' },
-              // { name: 'betulbiofuel.com', path: 'https://betulbiofuel.com' },
-              { name: "ERP link", path: "/erp" },
+              {
+                name: "Privacy Policy",
+                path: "/privacy-policy",
+                external: false,
+              },
+              { name: "Terms And Conditions", path: "/terms", external: false },
+               {
+                name: "Betul Biofuel",
+                path: "https://betulbiofuel.com",
+                external: true,
+              },
+              {
+                name: "ERP link",
+                path: "https://erp.betulbiofuel.com",
+                external: true,
+              },
             ].map((item, index) => (
               <li
                 key={index}
                 className="hover:text-yellow-400 transition-all duration-300"
               >
-                <a
-                  href={item.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full"
-                >
-                  {item.name}
-                </a>
+                {item.external ? (
+                  <a
+                    href={item.path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full"
+                  >
+                    {item.name}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className="relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-yellow-400 after:transition-all after:duration-300 hover:after:w-full"
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>

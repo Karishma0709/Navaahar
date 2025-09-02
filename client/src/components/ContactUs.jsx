@@ -1,8 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./ContactUs.module.css";
 import bg5 from "../assets/bg5.mov";
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    numberMobile: "",
+    email: "",
+    msg: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const subject = encodeURIComponent("New Contact Form Message");
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\n` +
+      `WhatsApp Number: ${formData.numberMobile}\n` +
+      `Email: ${formData.email}\n` +
+      `Message: ${formData.msg}`
+    );
+
+    window.location.href = `mailto:sales.navaahaar@betulbiofuel.com?subject=${subject}&body=${body}`;
+  };
+
   return (
     <div className="min-h-screen bg-gray-100">
       {/* ✅ Banner Section */}
@@ -28,14 +53,15 @@ const ContactUs = () => {
 
           <form
             className={`${styles.form} bg-white p-6 rounded-lg shadow-lg`}
-            action="https://formspree.io/f/yourFormID" // 🔁 Replace with your Formspree form ID
-            method="POST"
+            onSubmit={handleSubmit}
           >
             <div className="mb-4">
               <label className="block text-green-800 font-semibold mb-2">Name</label>
               <input
                 type="text"
                 name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Your Name"
                 required
                 className="w-full p-3 border border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -46,6 +72,8 @@ const ContactUs = () => {
               <input
                 type="tel"
                 name="numberMobile"
+                value={formData.numberMobile}
+                onChange={handleChange}
                 placeholder="Your Number"
                 required
                 className="w-full p-3 border border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -56,6 +84,8 @@ const ContactUs = () => {
               <input
                 type="email"
                 name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Your Email"
                 required
                 className="w-full p-3 border border-green-300 rounded focus:outline-none focus:ring-2 focus:ring-green-500"
@@ -65,6 +95,8 @@ const ContactUs = () => {
               <label className="block text-green-800 font-semibold mb-2">Message</label>
               <textarea
                 name="msg"
+                value={formData.msg}
+                onChange={handleChange}
                 placeholder="Your Message"
                 rows="5"
                 required
