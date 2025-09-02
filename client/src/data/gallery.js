@@ -58,7 +58,7 @@ const gallery = [
     // { id: 15, url: img15 },
     { id: 16, url: img16 },
     { id: 17, url: img17 },
-    { id: 18, url: img18 },
+    // { id: 18, url: img18 },
     { id: 19, url: img19 },
     { id: 20, url: img20 },
     { id: 21, url: img21 },
